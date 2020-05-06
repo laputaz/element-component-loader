@@ -39,7 +39,7 @@
 
 ## 使用
 
-- in vue-cli
+in vue-cli =>  `vue-config.js`
 ```javascript
 chainWebpack: (config) => {
     config.module
