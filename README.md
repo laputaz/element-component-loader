@@ -65,4 +65,6 @@ chainWebpack: (config) => {
           }
         ]
       }
+    ]
+ }
 ```
