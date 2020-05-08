@@ -9,4 +9,9 @@ const hyphenate = (str) => {
   return str.replace(HYPHENATE_PATTERN, '-$1').toLowerCase()
 }
 
-export { COMPONENT_PATTERN, STATEMENT_PATTERN, HYPHENATE_PATTERN, hyphenate }
+module.exports = {
+  COMPONENT_PATTERN,
+  STATEMENT_PATTERN,
+  HYPHENATE_PATTERN,
+  hyphenate
+}
