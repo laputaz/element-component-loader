@@ -4,6 +4,8 @@
 
 因为某些原因, 不使用官方的 `babel-component-plugin`,  所以写了一个`webpack`的`loader`;
 
+`element-ui`: `2.13.0`
+
 将
 ```html
 <script>
