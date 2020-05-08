@@ -1,6 +1,7 @@
 // let i = 0
 // const fs = require('fs')
-import { COMPONENT_PATTERN, STATEMENT_PATTERN, hyphenate } from './const'
+const utils = require('./const.js')
+const { COMPONENT_PATTERN, STATEMENT_PATTERN, hyphenate } = utils
 // 将使用到的组件名转换为import语句
 const tranformToStatement = (arr, isCss) =>
   arr.map((v) => {
