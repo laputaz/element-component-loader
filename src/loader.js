@@ -27,36 +27,22 @@ module.exports = function(source) {
       // 增加样式引入
       source = `
 ${source}
+<style lang='scss'>
+</style>
 <style lang='scss' scoped>
 ::v-deep {
+  $--font-path: "~element-ui/lib/theme-chalk/fonts";
+  @import "~element-ui/packages/theme-chalk/src/base.scss";
+  @import "~element-ui/lib/theme-chalk/button";
 \t\t${tranformToStatement(arr, true).join(';\n\t\t')};
-${
-  arr.includes('DatePicker')
-    ? '@import "~element-ui/lib/theme-chalk/button";'
-    : ''
 }
-${
-  arr.includes('Pagination')
-    ? '@import "~element-ui/lib/theme-chalk/select";'
-    : ''
-}
-${arr.includes('Table') ? '@import "~element-ui/lib/theme-chalk/tooltip";' : ''}
-}
-</style>
-<style lang='scss'>
-    $--font-path: "~element-ui/lib/theme-chalk/fonts";
-    @import "~element-ui/packages/theme-chalk/src/base.scss";
-    ${
-      arr.includes('Dialog')
-        ? '@import "~element-ui/lib/theme-chalk/dialog";'
-        : ''
-    }
 </style>
 `
     }
   } catch (e) {
     return source
   }
+  // console.log(111)
   // fs.writeFileSync('qwe/' + i, source)
   // i++
   return source
