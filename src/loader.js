@@ -33,6 +33,7 @@ ${source}
 ::v-deep {
   $--font-path: "~element-ui/lib/theme-chalk/fonts";
   @import "~element-ui/packages/theme-chalk/src/base.scss";
+  // 时间选择组件需要 datepicker
   @import "~element-ui/lib/theme-chalk/button";
 \t\t${tranformToStatement(arr, true).join(';\n\t\t')};
 }
