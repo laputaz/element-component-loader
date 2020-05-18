@@ -46,6 +46,7 @@ in vue-cli =>  `vue-config.js`
 chainWebpack: (config) => {
     config.module
       .rule('vue')
+      .include.add(/packages/)  // your components dir
       .use('element-component-loader')
       .loader('./build/element-component-loader.js')
       .end()
