@@ -48,7 +48,7 @@ chainWebpack: (config) => {
       .rule('vue')
       .include.add(/packages/)  // your components dir
       .use('element-component-loader')
-      .loader('./build/element-component-loader.js')
+      .loader('element-component-loader')
       .end()
 }
 ```
